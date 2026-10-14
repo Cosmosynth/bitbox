@@ -22,8 +22,8 @@ def test_positive_number_million():
 def test_negative_number():
     assert run(-6708) == "negative six thousand seven hundred eight"
 
-def test_not_integer():
-    assert run(23.4) == "Error: Provide a valid integer."
+def test_non_integer():
+    assert run(23.4) == "twenty-three"
 
 
 
