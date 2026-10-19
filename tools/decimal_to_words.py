@@ -15,6 +15,9 @@ def run(*args) -> str:
     if n == 0:
         return "zero"
 
+    if abs(n) >= 10**15:
+        return "Error: number too large"
+
     ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
             "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", 
             "seventeen", "eighteen", "nineteen"]

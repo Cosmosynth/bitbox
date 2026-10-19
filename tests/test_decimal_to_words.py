@@ -25,5 +25,27 @@ def test_negative_number():
 def test_non_integer():
     assert run(23.4) == "twenty-three"
 
+def test_string_argument():
+    assert run("1234") == "one thousand two hundred thirty-four"
+
+def test_string_argument_negative():
+    assert run("-6708") == "negative six thousand seven hundred eight"
+
+def test_number_too_large():
+    assert run(10**15) == "Error: number too large"
+
+def test_negative_number_too_large():
+    assert run(-(10**15)) == "Error: number too large"
+
+def test_number_too_large_as_string():
+    assert run("1000000000000000") == "Error: number too large"
+
+def test_largest_supported_value():
+    assert run("999999999999999") == (
+        "nine hundred ninety-nine trillion nine hundred ninety-nine billion "
+        "nine hundred ninety-nine million nine hundred ninety-nine thousand "
+        "nine hundred ninety-nine"
+    )
+
 
 
